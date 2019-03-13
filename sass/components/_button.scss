@@ -10,6 +10,7 @@
         position: relative;
         font-size: $default-font-size;
     }
+    //
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -40,7 +41,7 @@
         &::after {
             content: '';
             display: inline-block;
-            background-color: $color-white;
+            background-color: $color-primary;
         }
     }
     //

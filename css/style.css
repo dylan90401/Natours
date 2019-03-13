@@ -162,7 +162,7 @@ body {
   .btn--green::after {
     content: '';
     display: inline-block;
-    background-color: #fff; }
+    background-color: #55c57a; }
 
 .btn::after {
   /* must have content and display property no matter what with ::after */
