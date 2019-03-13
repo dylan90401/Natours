@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* setting universal element box-sizing inherit so every element on page will inherit from body. */
+    box-sizing: inherit;
+}
+
+
+/* set root font size so we can adjsut rem - change to 10 px so 1 rem = 10px */
+
+html {
+    /* default font size is 16px on user browser.  We will use percentage so we can get 10px. */
+    /* font-size: 10px; */
+    // This defines what 1 REM is - very important
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}

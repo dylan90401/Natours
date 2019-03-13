@@ -1,0 +1,8 @@
+// we use a the 'clearfix' mixin to add height to elements in which the children are floated.  this makes a nice box.
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
