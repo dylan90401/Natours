@@ -13,3 +13,58 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:  Phone - max width
+601 - 900px:  Tablet - portrait max-width
+901 - 1200px: Tablet - landscape max-width
+1201 - 1800: Desktop -  NORMAL STYLES
+1801+ Big Desktop -- min-width
+*/
+
+/*
+ @content directive lets us add content to mixin
+
+@mixin respond-phone {
+    @media (max-width: 600) { @content };
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == xxx {
+          @media (max-width: 37.5em) { @content }; 
+    }
+}
+ $breakpoint is name of breakpoint of page - choices are
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+    REMS fail to work as media queries.  it is best to use EM for media queries.  Since EM is based off of user font size, base is usually 16
+    1em = 16px;
+*/
+
+//  ORDER: Base + typography > general layout (header footer nav) + grid > page layout > components
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; // 1800px
+    }
+}
+
+
+

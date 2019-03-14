@@ -7,14 +7,22 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     transition: transform .3s;
 
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
+
     &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
         // next 4 declarations make the text show a gradient.
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        font-size: 6rem;
-        margin-bottom: .5rem;
+        
+        @include respond(tab-port) {
+            margin:0;
+        }
     }
 
     &:hover {
