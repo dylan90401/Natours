@@ -1,35 +1,40 @@
 .story {
     width: 75%;
     margin: 0 auto;
-    box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .60);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    background-color: rgba($color-white, 0.6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
+
     //skew entire story
     transform: skewX(-12deg);
-    //
+
     //select direct child only
-    &>* {
+    & > * {
         transform: skewX(12deg);
     }
-    //
+
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
+
         // shape outside property -define vectorized shape path
-        // first value is radius, 50% is half the height and width of the element. The element must be floated for this to work. And must have defined width and height.  
+        // first value is radius, 50% is half the height and width of the element. The element must be floated for this to work. And must have defined width and height.
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
+
         // clip path to make the actual circle
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
+
         //transform translate to move over
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
     }
+
     // images always need a width or height always
     &__img {
         height: 100%;
@@ -37,11 +42,11 @@
         backface-visibility: hidden;
         transition: all .5s;
     }
-    //
+
     &__text {
         transform: skewX(12deg);
     }
-    //
+
     &__caption {
         position: absolute;
         top: 50%;
@@ -53,15 +58,16 @@
         text-align: center;
         opacity: 0;
         transition: all .5s;
+
         // to fix small animation glitch
         backface-visibility: hidden;
     }
-    //
+
     &:hover &__caption {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
-    //
+
     &:hover &__img {
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);

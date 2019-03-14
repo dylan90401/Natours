@@ -7,10 +7,11 @@
     z-index: -1;
     opacity: .15;
     overflow: hidden;
-    //
+
     &__content {
         width: 100%;
         height: 100%;
+
         // use object-fit:cover - this works with HTML elements or images or video makes image cover parent element
         object-fit: cover;
     }

@@ -9,11 +9,13 @@
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("../img/nat-4.jpg");
     background-size: cover;
     margin-top: -10rem;
+
     // skew the entire section
     transform: skewY(-7deg);
+
     // select everything that is a only direct child of section-features
     // .section-features > *
-    &>* {
+    & > * {
         transform: skewY(7deg);
     }
 }
@@ -36,12 +38,12 @@
 
 .book {
     // notive that the 50% is same for both colors thus it starts and stops gradient at same point making a sharp line;
-    background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url('../img/nat-10.jpg');
+    background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50%), url("../img/nat-10.jpg");
     background-size: 100%;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
     height: 50rem;
-    //
+
     &__form {
         width: 50%;
         padding: 6rem;
