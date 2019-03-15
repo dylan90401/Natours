@@ -588,7 +588,7 @@ animation-timing-function: ease-out; */
     display: table-cell; }
     @media (max-width: 37.5em) {
       .popup__left {
-        display: block;
+        display: inline-block;
         width: 100%; } }
   .popup__right {
     width: 66.666667%;
@@ -605,7 +605,8 @@ animation-timing-function: ease-out; */
     @media (max-width: 37.5em) {
       .popup__img {
         width: 50%;
-        float: left; } }
+        float: left;
+        height: 142px; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
