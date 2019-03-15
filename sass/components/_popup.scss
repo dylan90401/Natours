@@ -34,8 +34,9 @@
         display: table-cell;
 
         @include respond (phone) {
-            display:block;
+            display:inline-block;
             width:100%;
+            
         }
     }
     
@@ -59,6 +60,7 @@
         @include respond (phone) {
             width:50%;
             float:left;
+            height:142px;
         }
     }
     
