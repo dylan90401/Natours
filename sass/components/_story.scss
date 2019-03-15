@@ -16,15 +16,17 @@
         transform: skewX(12deg);
     }
 
-    @include respond (tab-port) {
+    @include respond(tab-port) {
         width: 100%;
         padding: 4rem;
         padding-left: 7rem;
     }
 
-    @include respond (phone) {
-        transform:skewX(0);
+
+    @include respond(phone) {
+        transform: skewX(0);
     }
+
 
     &__shape {
         width: 15rem;
@@ -33,18 +35,24 @@
 
         // shape outside property -define vectorized shape path
         // first value is radius, 50% is half the height and width of the element. The element must be floated for this to work. And must have defined width and height.
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
 
-        // clip path to make the actual circle
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
+        overflow: hidden;
+        border-radius:50%;
+
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            // clip path to make the actual circle
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius:none;
+        }
 
         //transform translate to move over
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
 
-        @include respond (phone) {
+        @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
         }
     }
@@ -61,7 +69,7 @@
         transform: skewX(12deg);
 
         @include respond(phone) {
-            transform:skewX(0);
+            transform: skewX(0);
         }
     }
 
