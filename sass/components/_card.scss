@@ -1,8 +1,8 @@
 .card {
     // Functionality
     //perspective smaller the number the bigger the perspective
-    perspective: 150rem;
     -moz-perspective: 150rem;
+    perspective: 150rem;
     position: relative;
     height: 52rem;
 
@@ -153,9 +153,9 @@
         font-weight: 100;
     }
 
-
-
-    @include respond(tab-port) {
+   // @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover: none){
         height: auto;
         border-radius: 3px;
         background-color: $color-white;
@@ -164,13 +164,12 @@
         &__side {
             height: auto;
             position: relative;
-            box-shadow:none;
-
+            box-shadow: none;
 
             &--back {
                 transform: rotateY(0deg);
-                -webkit-clip-path:polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-                clip-path:polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
             }
         }
 
@@ -189,7 +188,7 @@
             left: 0;
             transform: translate(0);
             width: 100%;
-            padding:7rem 4rem 4rem 4rem;
+            padding: 7rem 4rem 4rem 4rem;
         }
 
         &__price-box {

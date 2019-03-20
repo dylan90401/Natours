@@ -43,3 +43,8 @@ body {
     }
     
 }
+// text selection style
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
