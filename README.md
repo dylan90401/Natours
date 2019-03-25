@@ -1,4 +1,4 @@
-# Natours readme - edited - README copied from https://github.com/zolkocarbon/Udemy_Advanced_CSS_Natours/blob/master/readme.md and https://github.com/rafgarciaa/Natours
+# Natours readme - edited - README sourced from [here](https://github.com/zolkocarbon/Udemy_Advanced_CSS_Natours/blob/master/readme.md) and [here](https://github.com/rafgarciaa/Natours)
 ## [Natours](https://dylan90401.github.io/Natours/)
 A small landing page for a travel agency startup. This coding exercise capitalizes on the capabilities of HTML and CSS.
 
